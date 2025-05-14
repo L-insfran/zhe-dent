@@ -32,7 +32,7 @@ const ServiceCard = ({ service }) => {
         <img 
           src={service.icon} 
           alt={service.title}
-          className="w-24 h-24 mb-6 mx-auto object-contain transition-transform duration-300 group-hover:scale-110"
+          className="w-40 h-32 mb-4 mx-auto object-contain transition-transform duration-300 group-hover:scale-110"
           loading="lazy"
         />
         

@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Seo from './components/Seo';
 import ArañitasDentales from './pages/ArañitasDentales';
 import Contacto from './pages/Contacto';
+import Gracias from './pages/Gracias';
 import Home from './pages/Home';
 import PlacasDescarga from './pages/PlacasDescarga';
 import ProtesisAcrilicas from './pages/ProtesisAcrilicas';
@@ -63,6 +64,9 @@ const App = () => (
           <Route path="/servicios/reparaciones-urgentes" element={<ReparacionesUrgentes />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path='/sobrenosotros' element={<SobreNosotros />} />
+          <Route path="/gracias" element={<Gracias />} />
+          
+          {/* Ruta para manejar 404 */}
           <Route path="*" element={<h1 className="text-center text-2xl">404 - Página no encontrada</h1>} />
   
         </Routes>

@@ -1,7 +1,32 @@
-import React from 'react';
+
+import { useState } from 'react';
 import Seo from '../components/Seo';
 
 const Contacto = () => {
+  const [formData, setFormData] = useState({
+    nombre: '',
+    email: '',
+    telefono: '',
+    clinica: '',
+    asunto: '',
+    mensaje: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&');
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       <Seo 
@@ -37,7 +62,25 @@ const Contacto = () => {
               Utiliza el siguiente formulario para enviarnos un mensaje. Nos pondremos en contacto contigo lo antes posible para brindarte toda la información que necesites.
             </p>
             
-            <form className="space-y-4">
+            <form 
+              action={`https://formsubmit.co/${encodeURIComponent('leandro.insfran@gmail.com')}`}
+              method="POST"
+              onSubmit={(e) => {
+                if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
+                  e.preventDefault();
+                  alert("Por favor ingrese un email válido");
+                }
+              }}
+              className="space-y-4"
+            >
+              {/* Configuraciones ocultas */}
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="https://zhoedent.com/gracias" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_subject" value="Nuevo contacto desde Zhoedent" />
+              <input type="hidden" name="_autoresponse" value={`Hola ${formData.nombre},\n\nGracias por contactar a Zhoedent. Hemos recibido tu consulta sobre "${formData.asunto}" y te responderemos dentro de las próximas 24 horas hábiles.\n\nEste es un mensaje automático, no es necesario responder.\n\nAtentamente,\nEquipo Zhoedent`} />
+              <input type="hidden" name="_cc" value="copia@zhoedent.com" /> {/* Opcional */}
+
               <div>
                 <label htmlFor="nombre" className="block text-gray-700 font-medium mb-2">
                   Nombre completo <span className="text-red-500">*</span>
@@ -46,6 +89,8 @@ const Contacto = () => {
                   type="text"
                   id="nombre"
                   name="nombre"
+                  value={formData.nombre}
+                  onChange={handleChange}
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 />
@@ -59,6 +104,8 @@ const Contacto = () => {
                   type="email"
                   id="email"
                   name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 />
@@ -72,6 +119,8 @@ const Contacto = () => {
                   type="tel"
                   id="telefono"
                   name="telefono"
+                  value={formData.telefono}
+                  onChange={handleChange}
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 />
@@ -85,6 +134,8 @@ const Contacto = () => {
                   type="text"
                   id="clinica"
                   name="clinica"
+                  value={formData.clinica}
+                  onChange={handleChange}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 />
               </div>
@@ -96,15 +147,17 @@ const Contacto = () => {
                 <select
                   id="asunto"
                   name="asunto"
+                  value={formData.asunto}
+                  onChange={handleChange}
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 >
                   <option value="">Selecciona un asunto</option>
-                  <option value="cotizacion">Cotización</option>
-                  <option value="reparacion">Reparación urgente</option>
-                  <option value="consulta">Consulta general</option>
-                  <option value="clinicas">Atención a clínicas</option>
-                  <option value="otros">Otros</option>
+                  <option value="Cotización">Cotización</option>
+                  <option value="Reparación urgente">Reparación urgente</option>
+                  <option value="Consulta general">Consulta general</option>
+                  <option value="Atención a clínicas">Atención a clínicas</option>
+                  <option value="Otros">Otros</option>
                 </select>
               </div>
               
@@ -116,6 +169,8 @@ const Contacto = () => {
                   id="mensaje"
                   name="mensaje"
                   rows="4"
+                  value={formData.mensaje}
+                  onChange={handleChange}
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 ></textarea>
@@ -124,12 +179,17 @@ const Contacto = () => {
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="bg-blue-600 text-white font-semibold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300"
+                  className="bg-blue-600 text-white font-semibold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300 w-full"
                 >
                   Enviar mensaje
                 </button>
               </div>
             </form>
+            <p className="text-sm text-gray-500 mt-4">
+              <span className="text-red-500">*</span> Todos los campos marcados son obligatorios. 
+              Al enviar este formulario aceptas nuestra <a href="/politica-privacidad" className="text-blue-600 hover:underline">Política de Privacidad</a>.
+            </p>
+  
             
             <p className="text-sm text-gray-500 mt-4">
               <span className="text-red-500">*</span> Todos los campos marcados son obligatorios. Responderemos tu consulta dentro de las siguientes 24 horas hábiles.
@@ -158,7 +218,7 @@ const Contacto = () => {
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start">
                   <span className="mr-2">📲</span>
-                  <span>WhatsApp / Teléfono: <span className="font-medium">[+XX 000 000 000]</span></span>
+                  <span>WhatsApp / Teléfono: <span className="font-medium">[+54 11-5425-8792]</span></span>
                 </li>
                 <li className="flex items-start">
                   <span className="mr-2">📧</span>

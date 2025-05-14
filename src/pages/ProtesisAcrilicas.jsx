@@ -14,8 +14,16 @@ const ProtesisAcrilicas = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Prótesis Acrílicas</h1>
           <p className="text-xl md:text-2xl mb-8">Recupera tu sonrisa con soluciones accesibles, funcionales y estéticas</p>
-          <button className="bg-white text-blue-600 font-semibold py-3 px-8 rounded-full hover:bg-blue-50 transition duration-300 transform hover:scale-105">
-            Reserva tu consulta
+          <button
+            className="bg-white text-blue-600 font-semibold py-3 px-8 rounded-full hover:bg-blue-50 transition duration-300 transform hover:scale-105"
+            onClick={() => {
+              const mensaje = encodeURIComponent("Hola zhoedent tengo una duda sobre las prótesis acrílicas");
+              const numero = "541154258792";
+              const url = `https://wa.me/${numero}?text=${mensaje}`;
+              window.open(url, "_blank");
+            }}
+          >
+            ¿Cuál es tu consulta?
           </button>
         </div>
       </section>

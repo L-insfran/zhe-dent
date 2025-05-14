@@ -1,4 +1,4 @@
-
+const data=
 [
   {
     id:1,
@@ -29,3 +29,4 @@
     icon: ""
   }
 ]
+export default data;

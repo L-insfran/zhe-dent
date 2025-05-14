@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const ServiceCard = ({ service }) => {
+  const navigate = useNavigate();
+
   return (
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
@@ -39,7 +42,7 @@ const ServiceCard = ({ service }) => {
         {/* Botón sutil (opcional) */}
         <div className="mt-6 text-center opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
           <button 
-            onClick={() => console.log('Más información sobre:', service.title)}
+            onClick={() => navigate(`/servicios/${service.url}`)}
             className="inline-block px-4 py-2 text-sm font-medium text-blue-600 rounded-lg bg-blue-50 hover:bg-blue-100 cursor-pointer transition-colors duration-200"
           >
             Más información

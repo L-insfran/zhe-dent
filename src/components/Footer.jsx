@@ -1,4 +1,4 @@
-import { BiLogoFacebookCircle, BiLogoInstagram } from "react-icons/bi"
+import { BiLogoFacebookCircle, BiLogoInstagram, BiLogoWhatsapp } from "react-icons/bi"
 
 const Footer = () => {
   return (
@@ -32,6 +32,14 @@ const Footer = () => {
                 aria-label="Instagram">
                 <span className="sr-only">Instagram</span>
                 <BiLogoInstagram className="h-6 w-6" />
+              </a>
+              <a href="https://wa.me/541154258792"
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white" 
+                aria-label="Whatsapp">
+                <span className="sr-only">Whatsapp</span>
+                <BiLogoWhatsapp className="h-6 w-6" />
               </a>
             </div>
           </div>

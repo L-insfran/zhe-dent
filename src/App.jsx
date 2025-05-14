@@ -6,6 +6,7 @@ import ArañitasDentales from './pages/ArañitasDentales';
 import Contacto from './pages/Contacto';
 import Gracias from './pages/Gracias';
 import Home from './pages/Home';
+import NotFound from './pages/NotFound';
 import PlacasDescarga from './pages/PlacasDescarga';
 import ProtesisAcrilicas from './pages/ProtesisAcrilicas';
 import ReparacionesUrgentes from './pages/ReparacionesUrgentes';
@@ -67,7 +68,7 @@ const App = () => (
           <Route path="/gracias" element={<Gracias />} />
           
           {/* Ruta para manejar 404 */}
-          <Route path="*" element={<h1 className="text-center text-2xl">404 - Página no encontrada</h1>} />
+          <Route path="*" element={<NotFound />} />
   
         </Routes>
       </main>

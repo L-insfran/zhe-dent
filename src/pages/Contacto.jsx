@@ -1,5 +1,5 @@
-
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Seo from '../components/Seo';
 
 const Contacto = () => {
@@ -11,28 +11,49 @@ const Contacto = () => {
     asunto: '',
     mensaje: ''
   });
+  
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+    setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  
-  const encode = (data) => {
-    return Object.keys(data)
-      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-      .join('&');
-  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
 
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/leandro.insfran@gmail.com', {
+        method: 'POST',
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          ...formData,
+          _subject: `Nuevo mensaje de ${formData.nombre} - ${formData.asunto}`,
+          _template: 'table',
+          _autoresponse: `Hola ${formData.nombre}, hemos recibido tu mensaje sobre "${formData.asunto}". Te responderemos pronto.`
+        })
+      });
+
+      const data = await response.json();
+      if (data.success === 'true') {
+        navigate('/gracias', { replace: true });
+      }
+    } catch (error) {
+      console.error('Error al enviar el formulario:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
-      <Seo 
-        title="Contacto – Zhoedent | Soluciones Odontológicas Profesionales"
-        description="Contactá con Zhoedent para consultas, cotizaciones o reparaciones urgentes. Atención personalizada para clínicas, laboratorios y pacientes."
-        keywords="contacto Zhoedent, laboratorio dental contacto, reparación urgente prótesis dental, placas de descarga a medida, atención odontológica personalizada, contacto para clínicas dentales, soporte técnico odontológico"
+     <Seo 
+        title="Contacto – Zhoedent"
+        description="Formulario de contacto para solicitar información o cotizaciones"
       />
 
       {/* Hero Section */}
@@ -63,15 +84,8 @@ const Contacto = () => {
             </p>
             
             <form 
-              action={`https://formsubmit.co/${encodeURIComponent('leandro.insfran@gmail.com')}`}
-              method="POST"
-              onSubmit={(e) => {
-                if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
-                  e.preventDefault();
-                  alert("Por favor ingrese un email válido");
-                }
-              }}
-              className="space-y-4"
+              onSubmit={handleSubmit}
+            
             >
               {/* Configuraciones ocultas */}
               <input type="hidden" name="_captcha" value="false" />
@@ -177,12 +191,13 @@ const Contacto = () => {
               </div>
               
               <div className="pt-2">
-                <button
-                  type="submit"
-                  className="bg-blue-600 text-white font-semibold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300 w-full"
-                >
-                  Enviar mensaje
-                </button>
+              <button 
+          type="submit" 
+          disabled={isSubmitting}
+          className={`bg-blue-600 text-white font-semibold py-3 px-8 rounded-full ${isSubmitting ? 'opacity-50' : 'hover:bg-blue-700'} transition duration-300`}
+        >
+          {isSubmitting ? 'Enviando...' : 'Enviar mensaje'}
+        </button>
               </div>
             </form>
             <p className="text-sm text-gray-500 mt-4">

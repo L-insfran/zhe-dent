@@ -1,16 +1,11 @@
-import Link from 'next/link';
+
 import { BiCheckCircle, BiPhoneCall, BiTime } from 'react-icons/bi';
-import Seo from '../components/Seo';
+import { Link } from 'react-router-dom'; // Cambiamos next/link por react-router-dom
 
 const Gracias = () => {
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
-      <Seo 
-        title="Gracias por contactarnos | Zhoedent"
-        description="Hemos recibido tu mensaje. Un representante de Zhoedent se pondrá en contacto contigo dentro de las próximas 24 horas."
-        noindex={true}
-      />
-
       {/* Hero Section */}
       <section className="py-20 px-4 bg-blue-600 text-white">
         <div className="max-w-4xl mx-auto text-center">
@@ -71,10 +66,17 @@ const Gracias = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link href="/" className="bg-blue-600 text-white font-semibold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300 text-center">
+              <Link 
+                to="/" 
+                className="bg-blue-600 text-white font-semibold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300 text-center"
+                replace 
+              >
                 Volver al inicio
               </Link>
-              <a href="https://wa.me/5491154258792" className="bg-green-500 text-white font-semibold py-3 px-8 rounded-full hover:bg-green-600 transition duration-300 text-center flex items-center justify-center gap-2">
+              <a 
+                href="https://wa.me/5491154258792" 
+                className="bg-green-500 text-white font-semibold py-3 px-8 rounded-full hover:bg-green-600 transition duration-300 text-center flex items-center justify-center gap-2"
+              >
                 <BiPhoneCall /> WhatsApp
               </a>
             </div>

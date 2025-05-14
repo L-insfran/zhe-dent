@@ -1,4 +1,3 @@
-import React from 'react';
 import Seo from '../components/Seo';
 
 const ProtesisAcrilicas = () => {
@@ -27,7 +26,7 @@ const ProtesisAcrilicas = () => {
           <p className="text-lg text-gray-700 mb-6">
             Las prótesis acrílicas son una de las opciones más comunes, eficaces y económicas para reemplazar dientes perdidos. En nuestra clínica dental, ofrecemos prótesis dentales acrílicas personalizadas, diseñadas para adaptarse a tu boca de forma cómoda y natural, devolviéndote la funcionalidad masticatoria y la estética de tu sonrisa.
           </p>
-          <img src="/images/protesis-acrilicas.jpg" alt="Prótesis acrílicas mostrando diseño natural" className="w-full rounded-lg mb-6" />
+          <img src="https://www.expadent.com/wp-content/uploads/2023/10/Acrilica-02.jpg" alt="Prótesis acrílicas mostrando diseño natural" className="w-full rounded-lg mb-6" />
         </div>
       </section>
 

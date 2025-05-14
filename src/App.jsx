@@ -3,9 +3,12 @@ import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import Seo from './components/Seo';
 import ArañitasDentales from './pages/ArañitasDentales';
+import Contacto from './pages/Contacto';
 import Home from './pages/Home';
 import PlacasDescarga from './pages/PlacasDescarga';
 import ProtesisAcrilicas from './pages/ProtesisAcrilicas';
+import ReparacionesUrgentes from './pages/ReparacionesUrgentes';
+import SobreNosotros from './pages/SobreNosotros';
 
 
 const data = [
@@ -33,6 +36,7 @@ const data = [
   {
     id:4,
     title: "Reparaciones Urgentes",
+    url: "reparaciones-urgentes",
     description: "Servicio rápido y eficiente para reparaciones de emergencia.",
     icon: "https://imgs.search.brave.com/EcxfP0DkLvNrP5JbzTU9bGwCl75lhYNPCGgUjNCxLrE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/b2Rvc2RlbnRhbC5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MjIvMTAvSU1HLTIw/MjIxMDMxLVdBMDAx/My0zMDB4MjI1Lmpw/Zw"
   }
@@ -56,6 +60,10 @@ const App = () => (
           <Route path="/servicios/aranitas-dentales" element={<ArañitasDentales />} />
           <Route path="/servicios/protesis-acrilicas" element={<ProtesisAcrilicas />} />
           <Route path="/servicios/placas-de-descarga" element={<PlacasDescarga />} />
+          <Route path="/servicios/reparaciones-urgentes" element={<ReparacionesUrgentes />} />
+          <Route path="/contacto" element={<Contacto />} />
+          <Route path='/sobrenosotros' element={<SobreNosotros />} />
+          <Route path="*" element={<h1 className="text-center text-2xl">404 - Página no encontrada</h1>} />
   
         </Routes>
       </main>

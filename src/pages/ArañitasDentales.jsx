@@ -28,7 +28,7 @@ const ArañitasDentales = () => {
           <p className="text-lg text-gray-700 mb-6">
             ¿Has notado pequeñas líneas o grietas en tus dientes que parecen telarañas? Estas marcas, conocidas como <strong>arañitas dentales</strong>, pueden afectar la apariencia de tu sonrisa y ser una señal de desgaste en el esmalte. En nuestra clínica dental, te ofrecemos un diagnóstico profesional y tratamientos efectivos para mantener tu salud bucal en óptimas condiciones.
           </p>
-          <img src="/images/aragnitas-dentales.jpg" alt="Arañitas dentales en esmalte" className="w-full rounded-lg mb-6" />
+          <img src="https://http2.mlstatic.com/D_959761-MLA69871852366_062023-C.jpg" alt="Arañitas dentales en esmalte" className="w-full rounded-lg mb-6" />
         </div>
       </section>
 

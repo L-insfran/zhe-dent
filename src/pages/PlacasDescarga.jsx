@@ -27,7 +27,7 @@ const PlacasDescarga = () => {
           <p className="text-lg text-gray-700 mb-6">
             Las placas de descarga son uno de los tratamientos más eficaces para prevenir el desgaste dental y aliviar molestias causadas por el bruxismo (rechinar o apretar los dientes). En nuestra clínica odontológica, diseñamos placas personalizadas para cada paciente, fabricadas con materiales de alta calidad, que permiten proteger la salud bucal y mejorar la calidad del sueño.
           </p>
-          <img src="/images/placa-descarga.jpg" alt="Placa de descarga dental transparente sobre modelo de dientes" className="w-full rounded-lg mb-6" />
+          <img src="https://http2.mlstatic.com/D_Q_NP_2X_614085-MLA72944870712_112023-T.webp" alt="Placa de descarga dental transparente sobre modelo de dientes" className="w-full rounded-lg mb-6" />
         </div>
       </section>
 

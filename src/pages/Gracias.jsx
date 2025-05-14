@@ -1,9 +1,8 @@
-
 import { BiCheckCircle, BiPhoneCall, BiTime } from 'react-icons/bi';
-import { Link } from 'react-router-dom'; // Cambiamos next/link por react-router-dom
+import { Link } from 'react-router-dom';
 
 const Gracias = () => {
-
+ 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       {/* Hero Section */}

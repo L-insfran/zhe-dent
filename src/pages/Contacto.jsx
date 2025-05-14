@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Seo from '../components/Seo';
+import { useGracias } from '../context/GraciasContext';
 
 const Contacto = () => {
+  const { autorizar } = useGracias();
   const [formData, setFormData] = useState({
     nombre: '',
     email: '',
@@ -40,7 +42,10 @@ const Contacto = () => {
       });
 
       const data = await response.json();
+  
       if (data.success === 'true') {
+        
+        autorizar(); // habilita acceso a /gracias
         navigate('/gracias', { replace: true });
       }
     } catch (error) {
@@ -49,6 +54,35 @@ const Contacto = () => {
       setIsSubmitting(false);
     }
   };
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setIsSubmitting(true);
+
+  //   try {
+  //     const response = await fetch('https://formsubmit.co/ajax/leandro.insfran@gmail.com', {
+  //       method: 'POST',
+  //       headers: { 
+  //         'Content-Type': 'application/json',
+  //         'Accept': 'application/json'
+  //       },
+  //       body: JSON.stringify({
+  //         ...formData,
+  //         _subject: `Nuevo mensaje de ${formData.nombre} - ${formData.asunto}`,
+  //         _template: 'table',
+  //         _autoresponse: `Hola ${formData.nombre}, hemos recibido tu mensaje sobre "${formData.asunto}". Te responderemos pronto.`
+  //       })
+  //     });
+
+  //     const data = await response.json();
+  //     if (data.success === 'true') {
+  //       navigate('/gracias', { replace: true });
+  //     }
+  //   } catch (error) {
+  //     console.error('Error al enviar el formulario:', error);
+  //   } finally {
+  //     setIsSubmitting(false);
+  //   }
+  // };
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
      <Seo 

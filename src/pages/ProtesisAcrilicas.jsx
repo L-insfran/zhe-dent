@@ -23,7 +23,7 @@ const ProtesisAcrilicas = () => {
               window.open(url, "_blank");
             }}
           >
-            ¿Cuál es tu consulta?
+            ¿cuál es tu consulta?
           </button>
         </div>
       </section>
@@ -32,7 +32,7 @@ const ProtesisAcrilicas = () => {
       <section className="py-16 px-4 max-w-4xl mx-auto">
         <div className="bg-white rounded-xl shadow-lg p-8">
           <p className="text-lg text-gray-700 mb-6">
-            Las prótesis acrílicas son una de las opciones más comunes, eficaces y económicas para reemplazar dientes perdidos. En nuestra clínica dental, ofrecemos prótesis dentales acrílicas personalizadas, diseñadas para adaptarse a tu boca de forma cómoda y natural, devolviéndote la funcionalidad masticatoria y la estética de tu sonrisa.
+            Las prótesis acrílicas son una de las opciones más comunes, eficaces y económicas para reemplazar dientes perdidos. En Zhoedent, te ofrecemos prótesis dentales acrílicas personalizadas, diseñadas para adaptarse a tu boca de forma cómoda y natural, devolviéndote la funcionalidad masticatoria y la estética de tu sonrisa.
           </p>
           <img src="https://www.expadent.com/wp-content/uploads/2023/10/Acrilica-02.jpg" alt="Prótesis acrílicas mostrando diseño natural" className="w-full rounded-lg mb-6" />
         </div>
@@ -48,7 +48,7 @@ const ProtesisAcrilicas = () => {
                 Las prótesis acrílicas son dispositivos removibles fabricados en resina acrílica que reemplazan uno o varios dientes ausentes. Este tipo de prótesis puede ser total (cuando reemplaza todos los dientes de una arcada) o parcial (cuando sustituye algunos dientes en boca).
               </p>
               <p className="text-gray-700">
-                Gracias a los avances en odontología, las prótesis acrílicas actuales ofrecen una apariencia natural, mayor confort y una excelente relación calidad-precio.
+                Gracias a los avances en materiales y tecnología, las prótesis acrílicas actuales ofrecen una apariencia natural, mayor confort y una excelente relación calidad-precio.
               </p>
             </div>
             <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
@@ -165,7 +165,7 @@ const ProtesisAcrilicas = () => {
                 {[
                   {icon: "🧼", text: "Lavar la prótesis diariamente con cepillo suave y jabón neutro (no pasta dental)."},
                   {icon: "💧", text: "Retirar la prótesis por la noche para permitir el descanso de las encías."},
-                  {icon: "👨‍⚕️", text: "Acudir a controles odontológicos periódicos para ajustes y revisiones."},
+                  {icon: "👨‍⚕️", text: "Acudir a controles periódicos para ajustes y revisiones."},
                   {icon: "❌", text: "Evitar exponerla al calor excesivo o caídas que puedan deformarla."},
                   {icon: "💦", text: "Mantenerla en agua o solución limpiadora cuando no esté en uso."},
                   {icon: "🚭", text: "Evitar fumar, ya que puede manchar la resina acrílica."}
@@ -204,7 +204,7 @@ const ProtesisAcrilicas = () => {
                 </li>
               </ul>
               <p className="text-gray-700 font-medium">
-                👉 En nuestra clínica, diseñamos cada prótesis de forma personalizada y realizamos pruebas y ajustes progresivos para garantizar la máxima comodidad y adaptación funcional.
+                👉 En Zhoedent, diseñamos cada prótesis de forma personalizada y realizamos pruebas y ajustes progresivos para garantizar la máxima comodidad y adaptación funcional.
               </p>
             </div>
           </div>
@@ -218,9 +218,9 @@ const ProtesisAcrilicas = () => {
           
           <div className="space-y-6">
             {[
-              "Evaluación clínica personalizada.",
+              "Evaluación personalizada.",
               "Toma de impresiones dentales precisas.",
-              "Diseño y fabricación en laboratorio especializado.",
+              "Diseño y fabricación especializada.",
               "Pruebas de adaptación y ajuste.",
               "Entrega y orientación sobre el uso y mantenimiento.",
               "Controles periódicos para asegurar el buen estado."
@@ -280,8 +280,14 @@ const ProtesisAcrilicas = () => {
           <p className="text-xl mb-8">
             La pérdida de dientes no solo afecta la estética, sino también la alimentación, el habla y la autoestima. Con nuestras prótesis acrílicas personalizadas, puedes volver a sonreír con confianza y disfrutar de una vida plena.
           </p>
-          <button className="bg-white text-blue-600 font-semibold py-3 px-8 rounded-full hover:bg-blue-50 transition duration-300 transform hover:scale-105">
-            Agenda tu evaluación gratuita
+          <button className="bg-white text-blue-600 font-semibold py-3 px-8 rounded-full hover:bg-blue-50 transition duration-300 transform hover:scale-105"
+            onClick={() => {
+              const mensaje = encodeURIComponent("Hola zhoedent me gustaria resevar un por servicio de protesis acrilica");
+              const numero = "541154258792";
+              const url = `https://wa.me/${numero}?text=${mensaje}`;
+              window.open(url, "_blank");
+            }}>
+            reserva tu turno
           </button>
         </div>
       </section>

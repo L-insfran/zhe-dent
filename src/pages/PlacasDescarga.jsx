@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Seo from '../components/Seo';
 
 const PlacasDescarga = () => {
@@ -15,8 +15,14 @@ const PlacasDescarga = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Placas de Descarga Dentales</h1>
           <p className="text-xl md:text-2xl mb-8">Protege tus dientes y alivia el bruxismo con un tratamiento profesional</p>
-          <button className="bg-white text-blue-600 font-semibold py-3 px-8 rounded-full hover:bg-blue-50 transition duration-300 transform hover:scale-105">
-            Reserva tu consulta
+          <button className="bg-white text-blue-600 font-semibold py-3 px-8 rounded-full hover:bg-blue-50 transition duration-300 transform hover:scale-105"
+            onClick={() => {
+              const mensaje = encodeURIComponent("Hola zhoedent me gustaria resevar un turno por el servicio de placas de descarga");
+              const numero = "541154258792";
+              const url = `https://wa.me/${numero}?text=${mensaje}`;
+              window.open(url, "_blank");
+            }}>
+              reserva tu turno hoy mismo
           </button>
         </div>
       </section>
@@ -25,7 +31,7 @@ const PlacasDescarga = () => {
       <section className="py-16 px-4 max-w-4xl mx-auto">
         <div className="bg-white rounded-xl shadow-lg p-8">
           <p className="text-lg text-gray-700 mb-6">
-            Las placas de descarga son uno de los tratamientos más eficaces para prevenir el desgaste dental y aliviar molestias causadas por el bruxismo (rechinar o apretar los dientes). En nuestra clínica odontológica, diseñamos placas personalizadas para cada paciente, fabricadas con materiales de alta calidad, que permiten proteger la salud bucal y mejorar la calidad del sueño.
+            Las placas de descarga son uno de los tratamientos más eficaces para prevenir el desgaste dental y aliviar molestias causadas por el bruxismo (rechinar o apretar los dientes). En zhoedent diseñamos placas personalizadas para cada paciente, fabricadas con materiales de alta calidad, que permiten proteger la salud bucal y mejorar la calidad del sueño.
           </p>
           <img src="https://http2.mlstatic.com/D_Q_NP_2X_614085-MLA72944870712_112023-T.webp" alt="Placa de descarga dental transparente sobre modelo de dientes" className="w-full rounded-lg mb-6" />
         </div>
@@ -108,7 +114,7 @@ const PlacasDescarga = () => {
           
           <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4">
             <p className="text-yellow-800 font-medium">
-              📌 Recomendación profesional: No todas las placas son iguales. El diagnóstico odontológico es clave para determinar el tipo de férula que necesitas.
+              📌 Recomendación profesional: No todas las placas son iguales. El diagnóstico es clave para determinar el tipo de férula que necesitas.
             </p>
           </div>
         </div>
@@ -161,7 +167,7 @@ const PlacasDescarga = () => {
           </div>
           
           <div className="mt-8 text-center text-gray-700">
-            <p>En nuestra clínica, realizamos una evaluación precisa para elegir la mejor opción según tus necesidades.</p>
+            <p>En zhoedent, realizamos una evaluación precisa para elegir la mejor opción según tus necesidades.</p>
           </div>
         </div>
       </section>
@@ -173,9 +179,9 @@ const PlacasDescarga = () => {
           
           <div className="space-y-6">
             {[
-              "Consulta y diagnóstico clínico.",
+              "Consulta y diagnóstico.",
               "Toma de impresiones dentales precisas.",
-              "Diseño personalizado en laboratorio dental.",
+              "Diseño personalizado.",
               "Prueba, ajuste y recomendaciones de uso.",
               "Seguimiento periódico para garantizar efectividad."
             ].map((step, index) => (
@@ -268,7 +274,7 @@ const PlacasDescarga = () => {
                   {icon: "🧼", text: "Lavarla diariamente con agua y jabón neutro (evita pastas abrasivas)."},
                   {icon: "💧", text: "Guardarla en un estuche ventilado cuando no la uses."},
                   {icon: "🦷", text: "No exponerla a altas temperaturas ni dejarla al sol."},
-                  {icon: "👨‍⚕️", text: "Realizar controles odontológicos periódicos."},
+                  {icon: "👨‍⚕️", text: "Realizar controles periódicos."},
                   {icon: "🚿", text: "Enjuagarla antes de cada uso."},
                   {icon: "🔍", text: "Revisar periódicamente en busca de desgastes o fisuras."}
                 ].map((item, index) => (
@@ -281,10 +287,10 @@ const PlacasDescarga = () => {
             </div>
             
             <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
-              <h3 className="text-xl font-semibold text-blue-700 mb-4">¿Por qué elegir nuestra clínica para tu placa de descarga?</h3>
+              <h3 className="text-xl font-semibold text-blue-700 mb-4">¿Por qué elegirnos para tu placa de descarga?</h3>
               <ul className="space-y-3">
                 {[
-                  "Odontólogos especializados en trastornos de ATM y bruxismo",
+                  "Técnicos especializados en trastornos de ATM y bruxismo",
                   "Tecnología de vanguardia para diseño personalizado",
                   "Materiales de alta calidad y biocompatibles",
                   "Atención profesional centrada en el bienestar del paciente",
@@ -313,7 +319,7 @@ const PlacasDescarga = () => {
             <div className="border border-gray-200 rounded-lg p-6">
               <h3 className="text-xl font-semibold text-blue-600 mb-3">¿Puedo comprar una placa de descarga en una farmacia?</h3>
               <p className="text-gray-700">
-                No es recomendable. Las placas genéricas no se ajustan adecuadamente y pueden empeorar el problema. Es fundamental que sea personalizada y supervisada por un odontólogo.
+                No es recomendable. Las placas genéricas no se ajustan adecuadamente y pueden empeorar el problema. Es fundamental que sea personalizada y supervisada por un profesional.
               </p>
             </div>
             
@@ -331,12 +337,6 @@ const PlacasDescarga = () => {
               </p>
             </div>
             
-            <div className="border border-gray-200 rounded-lg p-6">
-              <h3 className="text-xl font-semibold text-blue-600 mb-3">¿Es cubierta por seguros médicos?</h3>
-              <p className="text-gray-700">
-                Muchos seguros dentales cubren parcial o totalmente las placas de descarga cuando son médicamente necesarias. Consúltanos para ayudarte con la gestión de tu seguro.
-              </p>
-            </div>
           </div>
         </div>
       </section>
@@ -348,8 +348,14 @@ const PlacasDescarga = () => {
           <p className="text-xl mb-8">
             No esperes a que el bruxismo cause daños irreversibles en tus dientes. Agenda una evaluación y descubre cómo una placa de descarga personalizada puede mejorar tu calidad de vida.
           </p>
-          <button className="bg-white text-blue-600 font-semibold py-3 px-8 rounded-full hover:bg-blue-50 transition duration-300 transform hover:scale-105">
-            Agenda tu consulta hoy
+          <button className="bg-white text-blue-600 font-semibold py-3 px-8 rounded-full hover:bg-blue-50 transition duration-300 transform hover:scale-105"
+            onClick={() => {
+              const mensaje = encodeURIComponent("Hola zhoedent me gustaria resevar un turno para saber massobre las placas de descarga");
+              const numero = "541154258792";
+              const url = `https://wa.me/${numero}?text=${mensaje}`;
+              window.open(url, "_blank");
+            }}>
+            reserva tu turno hoy mismo
           </button>
         </div>
       </section>

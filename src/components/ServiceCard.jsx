@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion';
+import { useMediaQuery } from 'react-responsive';
 import { useNavigate } from 'react-router-dom';
 import reparaciones from '../assets/reparaciones.png';
 
 const ServiceCard = ({ service }) => {
   const navigate = useNavigate();
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
   if (service.id === 4) {
     service.icon = reparaciones;
@@ -44,8 +46,8 @@ const ServiceCard = ({ service }) => {
           {service.description}
         </p>
         
-        {/* Botón sutil (opcional) */}
-        <div className="mt-6 text-center opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+        {/* Botón visible en móviles o al hacer hover */}
+        <div className={`mt-6 text-center transition-all duration-300 ${isMobile ? 'opacity-100 translate-y-0' : 'opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0'}`}>
           <button 
             onClick={() => navigate(`/servicios/${service.url}`)}
             className="inline-block px-4 py-2 text-sm font-medium text-blue-600 rounded-lg bg-blue-50 hover:bg-blue-100 cursor-pointer transition-colors duration-200"

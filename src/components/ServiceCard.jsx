@@ -1,8 +1,13 @@
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+import reparaciones from '../assets/reparaciones.png';
 
 const ServiceCard = ({ service }) => {
   const navigate = useNavigate();
+
+  if (service.id === 4) {
+    service.icon = reparaciones;
+  }
 
   return (
     <motion.div 

@@ -1,3 +1,4 @@
+
 import Seo from '../components/Seo';
 import ServiceCard from '../components/ServiceCard';
 const Home = ({servicesData}) => {
@@ -16,7 +17,7 @@ const Home = ({servicesData}) => {
               Mecánica Dental de <span className="text-blue-600">Precisión</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Fabricación y reparación de elementos dentales con tecnología de última generación
+              Fabricación y reparación de protesis dentales con tecnología de última generación
             </p>
           </div>
         </section>
@@ -24,6 +25,7 @@ const Home = ({servicesData}) => {
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12">Nuestros Servicios</h2>
+            
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {servicesData.map((service, index) => (
                 <ServiceCard key={`service-${index}`} service={service} />

@@ -282,12 +282,12 @@ const ProtesisAcrilicas = () => {
           </p>
           <button className="bg-white text-blue-600 font-semibold py-3 px-8 rounded-full hover:bg-blue-50 transition duration-300 transform hover:scale-105"
             onClick={() => {
-              const mensaje = encodeURIComponent("Hola zhoedent me gustaria resevar un por servicio de protesis acrilica");
+              const mensaje = encodeURIComponent("Hola zhoedent me gustaria resevar un turno por el servicio de protesis acrilica");
               const numero = "541154258792";
               const url = `https://wa.me/${numero}?text=${mensaje}`;
               window.open(url, "_blank");
             }}>
-            reserva tu turno
+            reserva tu turno hoy mismo
           </button>
         </div>
       </section>

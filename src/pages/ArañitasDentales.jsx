@@ -15,8 +15,14 @@ const ArañitasDentales = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Tratamiento de Arañitas Dentales</h1>
           <p className="text-xl md:text-2xl mb-8">Soluciones estéticas y preventivas para microfisuras en los dientes</p>
-          <button className="bg-white text-blue-600 font-semibold py-3 px-8 rounded-full hover:bg-blue-50 transition duration-300 transform hover:scale-105">
-            Reserva tu consulta
+          <button  className="bg-white text-blue-600 font-semibold py-3 px-8 rounded-full hover:bg-blue-50 transition duration-300 transform hover:scale-105"
+            onClick={() => {
+              const mensaje = encodeURIComponent("Hola zhoedent tengo una duda sobre el tratamiento de arañitas dentales");
+              const numero = "541154258792";
+              const url = `https://wa.me/${numero}?text=${mensaje}`;
+              window.open(url, "_blank");
+            }}>
+          ¿cuál es tu consulta?
           </button>
         </div>
       </section>
@@ -26,7 +32,7 @@ const ArañitasDentales = () => {
       <section className="py-16 px-4 max-w-4xl mx-auto">
         <div className="bg-white rounded-xl shadow-lg p-8">
           <p className="text-lg text-gray-700 mb-6">
-            ¿Has notado pequeñas líneas o grietas en tus dientes que parecen telarañas? Estas marcas, conocidas como <strong>arañitas dentales</strong>, pueden afectar la apariencia de tu sonrisa y ser una señal de desgaste en el esmalte. En nuestra clínica dental, te ofrecemos un diagnóstico profesional y tratamientos efectivos para mantener tu salud bucal en óptimas condiciones.
+            ¿Has notado pequeñas líneas o grietas en tus dientes que parecen telarañas? Estas marcas, conocidas como <strong>arañitas dentales</strong>, pueden afectar la apariencia de tu sonrisa y ser una señal de desgaste en el esmalte. En Zhoednt, te ofrecemos un diagnóstico profesional y tratamientos efectivos para mantener tu salud bucal en óptimas condiciones.
           </p>
           <img src="https://http2.mlstatic.com/D_959761-MLA69871852366_062023-C.jpg" alt="Arañitas dentales en esmalte" className="w-full rounded-lg mb-6" />
         </div>
@@ -138,9 +144,9 @@ const ArañitasDentales = () => {
       {/* Tratamientos Section */}
       <section className="py-16 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Tratamientos disponibles en nuestra clínica</h2>
+          <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Tratamientos disponibles en zhoedent</h2>
           <p className="text-gray-700 mb-12 text-center">
-            En nuestra clínica odontológica, contamos con diversas soluciones personalizadas para tratar las arañitas dentales:
+            En zhoedent contamos con diversas soluciones personalizadas para tratar las arañitas dentales:
           </p>
           
           <div className="grid md:grid-cols-2 gap-8">
@@ -201,10 +207,16 @@ const ArañitasDentales = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6">¿Cómo saber si necesito tratamiento?</h2>
           <p className="text-xl mb-8">
-            Si notas líneas finas en tus dientes, tienes sensibilidad al frío o calor, o rechinas los dientes mientras duermes, agenda una consulta odontológica. Evaluaremos tu caso con tecnología de diagnóstico avanzada y te recomendaremos el tratamiento más adecuado para proteger y embellecer tu sonrisa.
+            Si notas líneas finas en tus dientes, tienes sensibilidad al frío o calor, o rechinas los dientes mientras duermes, agenda una consulta. Evaluaremos tu caso y te recomendaremos el tratamiento más adecuado para proteger y embellecer tu sonrisa.
           </p>
-          <button className="bg-white text-blue-600 font-semibold py-3 px-8 rounded-full hover:bg-blue-50 transition duration-300 transform hover:scale-105">
-            Agenda tu consulta hoy mismo
+          <button className="bg-white text-blue-600 font-semibold py-3 px-8 rounded-full hover:bg-blue-50 transition duration-300 transform hover:scale-105"
+            onClick={() => {
+              const mensaje = encodeURIComponent("Hola zhoedent me gustaria resevar un turno por el servicio de arañitas dentales");
+              const numero = "541154258792";
+              const url = `https://wa.me/${numero}?text=${mensaje}`;
+              window.open(url, "_blank");
+            }}>
+            reseva tu turno hoy mismo
           </button>
         </div>
       </section>

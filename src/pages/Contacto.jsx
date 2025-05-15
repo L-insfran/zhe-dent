@@ -54,35 +54,6 @@ const Contacto = () => {
       setIsSubmitting(false);
     }
   };
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   setIsSubmitting(true);
-
-  //   try {
-  //     const response = await fetch('https://formsubmit.co/ajax/leandro.insfran@gmail.com', {
-  //       method: 'POST',
-  //       headers: { 
-  //         'Content-Type': 'application/json',
-  //         'Accept': 'application/json'
-  //       },
-  //       body: JSON.stringify({
-  //         ...formData,
-  //         _subject: `Nuevo mensaje de ${formData.nombre} - ${formData.asunto}`,
-  //         _template: 'table',
-  //         _autoresponse: `Hola ${formData.nombre}, hemos recibido tu mensaje sobre "${formData.asunto}". Te responderemos pronto.`
-  //       })
-  //     });
-
-  //     const data = await response.json();
-  //     if (data.success === 'true') {
-  //       navigate('/gracias', { replace: true });
-  //     }
-  //   } catch (error) {
-  //     console.error('Error al enviar el formulario:', error);
-  //   } finally {
-  //     setIsSubmitting(false);
-  //   }
-  // };
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
      <Seo 
@@ -118,6 +89,7 @@ const Contacto = () => {
             </p>
             
             <form 
+              action="https://formsubmit.co/leandro.infran@gmail.com" method="POST"
               onSubmit={handleSubmit}
             
             >

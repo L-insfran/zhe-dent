@@ -50,9 +50,10 @@ const ReparacionesUrgentes = () => {
           </p>
           <div className="bg-red-50 border-l-4 border-red-500 p-4 mb-6">
             <p className="text-red-700 font-medium">
-              Si tienes dolor, una prótesis rota o una fractura dental, ¡no
+              Una prótesis rota, ¡no
               esperes más! Nuestro equipo está preparado para darte una solución
-              inmediata.
+              inmediata. 
+               <strong> Nuestros técnicos dentales estarán atendiendo su EMERGENCIA!!!</strong>
             </p>
           </div>
           <img
@@ -83,11 +84,8 @@ const ReparacionesUrgentes = () => {
               </p>
               <ul className="mt-4 space-y-3">
                 {[
-                  "Pacientes con dolor agudo o infecciones.",
-                  "Personas que sufren fracturas dentales por traumatismos.",
                   "Usuarios de prótesis dentales rotas o desajustadas.",
-                  "Emergencias estéticas antes de un evento importante.",
-                  "Desprendimientos de carillas, coronas o empastes.",
+                  "Emergencias estéticas antes de un evento importante."
                 ].map((item, index) => (
                   <li key={index} className="flex items-start">
                     <svg
@@ -116,8 +114,7 @@ const ReparacionesUrgentes = () => {
               </h3>
               <p className="text-gray-700 mb-4">
                 Algunas emergcias dentales pueden comprometer seriamente tu
-                salud si no son atendidas a tiempo. No subestimes síntomas como
-                dolor intenso, hinchazón o sangrado persistente.
+                salud si no son atendidas a tiempo.
               </p>
               <p className="text-gray-700 font-medium">
                 El tiempo de respuesta es crucial para salvar dientes y evitar
@@ -207,45 +204,13 @@ const ReparacionesUrgentes = () => {
                 no quedes sin tus dientes.
               </p>
             </div>
-
             <div className="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition duration-300">
               <h3 className="text-xl font-semibold text-blue-600 mb-3">
-                ✔️ Atención a fracturas dentales
+              ✔️ Prótesis removibles expresss
               </h3>
               <p className="text-gray-700">
-                Tratamiento conservador o restaurador para dientes rotos por
-                golpes o caídas. Recuperamos la estética y función de tus
-                dientes dañados.
-              </p>
-            </div>
-
-            <div className="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition duration-300">
-              <h3 className="text-xl font-semibold text-blue-600 mb-3">
-                ✔️ Tratamientos para dolor dental intenso
-              </h3>
-              <p className="text-gray-700">
-                Alivio inmediato del dolor mediante diagnóstico, medicación o
-                procedimientos como endodoncia o drenaje de infecciones.
-              </p>
-            </div>
-
-            <div className="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition duration-300">
-              <h3 className="text-xl font-semibold text-blue-600 mb-3">
-                ✔️ Tratamientos de urgencia para brackets
-              </h3>
-              <p className="text-gray-700">
-                Ajuste o retiro temporal de brackets sueltos o alambres que
-                causan molestias. Soluciones para pacientes con ortodoncia.
-              </p>
-            </div>
-
-            <div className="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition duration-300">
-              <h3 className="text-xl font-semibold text-blue-600 mb-3">
-                ✔️ Extracciones de emergencia
-              </h3>
-              <p className="text-gray-700">
-                Cuando no hay posibilidad de conservar el diente y es necesario
-                aliviar el dolor o eliminar focos de infección.
+              Fabricación de prótesis parciales removibles en un día, con materiales
+              de alta calidad que garantizan comodidad y una estética natural.
               </p>
             </div>
           </div>
@@ -263,7 +228,7 @@ const ReparacionesUrgentes = () => {
             <div className="space-y-6">
               {[
                 "Evaluación rápida del caso: analizamos la situación en cuanto llegas.",
-                "Diagnóstico clínico inmediato: usamos tecnología avanzada para un diagnóstico preciso.",
+                
                 "Tratamiento de emergencia: aplicamos la solución más segura y eficaz según el caso.",
                 "Seguimiento posterior: en algunos casos, programamos una segunda cita para completar el tratamiento definitivo.",
               ].map((step, index) => (
@@ -286,7 +251,6 @@ const ReparacionesUrgentes = () => {
               <ul className="space-y-3">
                 {[
                   "Atendemos sin cita previa en casos de verdadera emergencia",
-                  "Priorizamos el alivio del dolor y la solución inmediata",
                   "Equipo disponible para evaluar tu situación rápidamente",
                   "Siempre buscamos la opción más conservadora posible",
                   "Materiales de primera calidad incluso en tratamientos de urgencia",
@@ -327,11 +291,11 @@ const ReparacionesUrgentes = () => {
               <ul className="space-y-4">
                 {[
                   "✅ Brindamos atención inmediata sin largas esperas",
-                  "✅ Contamos con un equipo de especialistas altamente capacitados",
+                  "✅ Somos especialistas y estamos altamente capacitados",
                   "✅ Utilizamos materiales de alta calidad para garantizar resultados duraderos",
                   "✅ Atendemos urgencias los fines de semana y feriados",
                   "✅ Ubicación céntrica y acceso fácil para emergencias",
-                  "✅ Equipamiento de última generación para diagnósticos precisos",
+                  "✅ Equipamiento de última generación",
                 ].map((item, index) => (
                   <li key={index} className="flex items-start">
                     <svg
@@ -369,7 +333,7 @@ const ReparacionesUrgentes = () => {
                   <h4 className="font-semibold text-gray-800">
                     📞 Teléfono de urgencias:
                   </h4>
-                  <p className="text-gray-700">[11-5425 8792]</p>
+                  <p className="text-gray-700">11-5425 8792</p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-800">
@@ -409,10 +373,8 @@ const ReparacionesUrgentes = () => {
                 {[
                   "Si se te cae un diente, colócalo en leche o suero fisiológico y ven de inmediato.",
                   "Si tienes una prótesis rota, no intentes pegarla con pegamento casero.",
-                  "Para dolores agudos, puedes tomar un analgésico recomendado hasta ser atendido.",
                   "Si hay sangrado o hinchazón, aplica compresas frías en la zona afectada.",
-                  "En caso de trauma facial, evita tocar la zona lesionada y acude inmediatamente.",
-                  "No uses objetos punzantes para aliviar dolor en caries o abscesos.",
+                  "En caso de trauma facial, evita tocar la zona lesionada y acude inmediatamente."
                 ].map((item, index) => (
                   <li key={index} className="flex items-start">
                     <div className="bg-blue-100 text-blue-600 rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">
@@ -434,12 +396,10 @@ const ReparacionesUrgentes = () => {
               </p>
               <ul className="space-y-2">
                 {[
-                  "Analgésicos recomendados por tu odontólogo",
+                  "Analgésicos",
                   "Gasas estériles",
-                  "Suero fisiológico o leche UHT",
                   "Recipiente pequeño con tapa",
-                  "Compresas frías instantáneas",
-                  "Número de emergencia de tu clínica dental",
+                  "Número de emergencia Zhoedent",
                 ].map((item, index) => (
                   <li key={index} className="flex items-start">
                     <svg
@@ -494,19 +454,6 @@ const ReparacionesUrgentes = () => {
                 tú mismo con adhesivos caseros.
               </p>
             </div>
-
-            <div className="border border-gray-200 rounded-lg p-6">
-              <h3 className="text-xl font-semibold text-blue-600 mb-3">
-                ¿Pueden atenderme si tengo un evento importante y necesito
-                reparar una carilla o diente estético?
-              </h3>
-              <p className="text-gray-700">
-                Sí, realizamos reparaciones estéticas urgentes para ocasiones
-                especiales. Nuestro objetivo es que recuperes tu sonrisa a
-                tiempo para tu evento importante.
-              </p>
-            </div>
-
           </div>
         </div>
       </section>
@@ -515,10 +462,10 @@ const ReparacionesUrgentes = () => {
       <section className="py-16 px-4 bg-red-600 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6">
-            No sufras con dolor dental innecesario
+            No te sientas intimidado innecesariamente
           </h2>
           <p className="text-xl mb-8">
-            En <strong>Zhoedent</strong> estamos comprometidos con tu salud bucal.
+            En <strong>Zhoedent</strong> estamos comprometidos en tu bienestar dental.
             Sabemos lo importante que es atenderte cuando más lo necesitas. No
             ignores los signos de una urgencia dental. Actuar a tiempo puede
             marcar la diferencia.
@@ -542,7 +489,7 @@ const ReparacionesUrgentes = () => {
            
           </div>
           <p className="mt-6 text-red-100">
-            Horario extendido para emergencias: [CONSULTAR QUE HORARIOS PONER]
+            Horario extendido para emergencias: 18:00 a 20:30hs
           </p>
         </div>
       </section>

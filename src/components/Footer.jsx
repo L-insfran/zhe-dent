@@ -12,7 +12,7 @@ const Footer = () => {
           <div>
             <h5 className="text-lg font-semibold mb-4">Contacto</h5>
             <p className="text-gray-400">Tel: +54 11-5425 8792</p>
-            <p className="text-gray-400">Email: contacto@zhoedent.com</p>
+            <p className="text-gray-400">Email: zhoezhoe40@gmail.com</p>
           </div>
           <div>
             <h5 className="text-lg font-semibold mb-4">Redes Sociales</h5>

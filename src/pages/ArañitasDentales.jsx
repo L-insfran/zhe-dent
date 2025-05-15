@@ -1,4 +1,5 @@
 
+import aranitas from '../assets/aranitas.jpg';
 import Seo from '../components/Seo';
 
 const ArañitasDentales = () => {
@@ -34,7 +35,7 @@ const ArañitasDentales = () => {
           <p className="text-lg text-gray-700 mb-6">
             ¿Has notado pequeñas líneas o grietas en tus dientes que parecen telarañas? Estas marcas, conocidas como <strong>arañitas dentales</strong>, pueden afectar la apariencia de tu sonrisa y ser una señal de desgaste en el esmalte. En Zhoednt, te ofrecemos un diagnóstico profesional y tratamientos efectivos para mantener tu salud bucal en óptimas condiciones.
           </p>
-          <img src="https://http2.mlstatic.com/D_959761-MLA69871852366_062023-C.jpg" alt="Arañitas dentales en esmalte" className="w-full rounded-lg mb-6" />
+          <img src={aranitas} alt="Arañitas dentales en esmalte" className="w-full rounded-lg mb-6" />
         </div>
       </section>
 
@@ -45,16 +46,17 @@ const ArañitasDentales = () => {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <p className="text-gray-700 mb-4">
-                Las arañitas dentales son <strong>microfisuras superficiales en el esmalte dental</strong>, también llamadas líneas de estrés. Suelen manifestarse como finas grietas visibles, especialmente al reflejarse la luz.
+                Las arañitas dentales o prótesis removibles es una <strong>solución dental para reemplazar una o dos piezas dentales perdidas.</strong>. Se utilizan para mejorar la estética y funcionalidad de la boca, permitiendo una mejor masticación y pronunciación.
               </p>
               <p className="text-gray-700">
-                Aunque no siempre causan dolor, sí pueden afectar la estética de tu sonrisa y, en algunos casos, revelar problemas como el <strong>bruxismo</strong> o desgaste excesivo.
+                Las arañitas suelen estar hechas de resina o metal y se colocan sobre los dientes restantes, proporcionando un soporte adicional. Son una opción menos invasiva que las coronas o puentes fijos, y pueden ser retiradas fácilmente para su limpieza.
               </p>
             </div>
             <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
-              <h3 className="text-xl font-semibold text-blue-700 mb-3">¿Debo preocuparme?</h3>
+              <h3 className="text-xl font-semibold text-blue-700 mb-3">Ventajas</h3>
               <p className="text-gray-700">
-                Si bien muchas microfisuras son solo estéticas, algunas pueden progresar. Te recomendamos una evaluación profesional para determinar si necesitas tratamiento.
+               Su principal objetivo es restaurar la función masticatoria y mejorar la estética dental. Además, son menos costosas que otras opciones de tratamiento y pueden ser una solución temporal mientras se considera un tratamiento más permanente.
+               <strong> Son cómodas, imperceptibles y fáciles de adaptar a la boca.</strong>
               </p>
             </div>
           </div>

@@ -18,14 +18,24 @@ const ReparacionesUrgentes = () => {
     </p>
     <div className="flex flex-col sm:flex-row justify-center gap-4">
       <a
-        href="tel:+541133081248"
+        href="tel:+54 1154258792"
         className="bg-white text-red-600 font-semibold py-3 px-8 rounded-full hover:bg-red-50 transition duration-300 transform hover:scale-105 text-center"
       >
         Llama ahora
       </a>
-      <button className="bg-red-700 text-white font-semibold py-3 px-8 rounded-full hover:bg-red-800 transition duration-300">
-        Ubicación
-      </button>
+      <div className="relative group inline-block">
+  <button
+    className="bg-red-700 text-white font-semibold py-3 px-8 rounded-full hover:bg-red-800 focus:outline-none transition duration-300"
+  >
+    Ubicación
+  </button>
+  <div
+    className="absolute -top-12 left-1/2 transform -translate-x-1/2 w-64 bg-white text-red-700 text-sm font-medium px-4 py-2 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 z-10"
+  >
+    Estamos a 3 cuadras de la estación de Morón
+    <div className="absolute bottom-[-6px] left-1/2 transform -translate-x-1/2 w-3 h-3 bg-white rotate-45"></div>
+  </div>
+</div>
     </div>
   </div>
 </section>

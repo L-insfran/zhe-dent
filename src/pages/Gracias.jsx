@@ -74,7 +74,10 @@ const Gracias = () => {
               </Link>
               <a 
                 href="https://wa.me/5491154258792" 
+                  target="_blank" 
+                rel="noopener noreferrer"
                 className="bg-green-500 text-white font-semibold py-3 px-8 rounded-full hover:bg-green-600 transition duration-300 text-center flex items-center justify-center gap-2"
+                aria-label="Whatsapp"
               >
                 <BiPhoneCall /> WhatsApp
               </a>

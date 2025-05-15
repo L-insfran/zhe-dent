@@ -27,7 +27,7 @@ const Contacto = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('https://formsubmit.co/ajax/leandro.insfran@gmail.com', {
+      const response = await fetch('https://formsubmit.co/ajax/zhoezhoe40@gmail.com', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
@@ -65,7 +65,7 @@ const Contacto = () => {
       <section className="py-20 px-4 bg-blue-600 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">📞 Contacto – Zhoedent</h1>
-          <p className="text-xl md:text-2xl mb-8">Estamos aquí para ayudarte con soluciones odontológicas de calidad</p>
+          <p className="text-xl md:text-2xl mb-8">Estamos aquí para ayudarte con soluciones técnicas de calidad</p>
         </div>
       </section>
 
@@ -73,7 +73,7 @@ const Contacto = () => {
       <section className="py-16 px-4 max-w-4xl mx-auto">
         <div className="bg-white rounded-xl shadow-lg p-8">
           <p className="text-lg text-gray-700 mb-6">
-            En Zhoedent, valoramos la comunicación directa con nuestros clientes, clínicas y profesionales de la odontología. Ya sea que necesites una cotización, agendar una reparación urgente o resolver dudas sobre nuestras prótesis dentales, placas de descarga u otros servicios, nuestro equipo está listo para brindarte una atención rápida, clara y personalizada.
+            En Zhoedent, valoramos la comunicación directa con nuestros clientes. Ya sea que necesites agendar una reparación urgente o resolver dudas sobre nuestras prótesis dentales, placas de descarga u otros servicios, nuestro equipo está listo para brindarte una atención rápida, clara y personalizada.
           </p>
         </div>
       </section>
@@ -83,13 +83,13 @@ const Contacto = () => {
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
           {/* Formulario */}
           <div className="bg-white p-6 rounded-lg shadow-md">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">📬 Escríbenos o solicita tu cotización</h2>
+            <h2 className="text-2xl font-bold text-gray-800 mb-6">📬 Escríbenos o solicita tu cita</h2>
             <p className="text-gray-700 mb-6">
               Utiliza el siguiente formulario para enviarnos un mensaje. Nos pondremos en contacto contigo lo antes posible para brindarte toda la información que necesites.
             </p>
             
             <form 
-              action="https://formsubmit.co/leandro.infran@gmail.com" method="POST"
+              action="https://formsubmit.co/zhoezhoe40@gmail.com" method="POST"
               onSubmit={handleSubmit}
             
             >
@@ -147,20 +147,6 @@ const Contacto = () => {
               </div>
               
               <div>
-                <label htmlFor="clinica" className="block text-gray-700 font-medium mb-2">
-                  Clínica o empresa (opcional)
-                </label>
-                <input
-                  type="text"
-                  id="clinica"
-                  name="clinica"
-                  value={formData.clinica}
-                  onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                />
-              </div>
-              
-              <div>
                 <label htmlFor="asunto" className="block text-gray-700 font-medium mb-2">
                   Asunto <span className="text-red-500">*</span>
                 </label>
@@ -173,10 +159,9 @@ const Contacto = () => {
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 >
                   <option value="">Selecciona un asunto</option>
-                  <option value="Cotización">Cotización</option>
                   <option value="Reparación urgente">Reparación urgente</option>
                   <option value="Consulta general">Consulta general</option>
-                  <option value="Atención a clínicas">Atención a clínicas</option>
+                  <option value="Atención a clínicas">Nuestro servicios</option>
                   <option value="Otros">Otros</option>
                 </select>
               </div>
@@ -221,8 +206,8 @@ const Contacto = () => {
           <div className="space-y-6">
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h2 className="text-2xl font-bold text-gray-800 mb-4">📍 Nuestra ubicación</h2>
-              <p className="text-gray-700 font-medium mb-2">Zhoedent – Laboratorio y Soluciones Odontológicas</p>
-              <p className="text-gray-700 mb-4">📌 Calle Falsa 123, [Ciudad], [Provincia]</p>
+              <p className="text-gray-700 font-medium mb-2">Zhoedent – Técnico dental</p>
+              <p className="text-gray-700 mb-4">📌 Estamos a 3 cuadras de la estacion Morón</p>
               
               <div className="bg-gray-100 p-4 rounded-lg">
                 <h3 className="font-semibold text-gray-800 mb-2">🕒 Horario de atención:</h3>
@@ -239,15 +224,11 @@ const Contacto = () => {
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start">
                   <span className="mr-2">📲</span>
-                  <span>WhatsApp / Teléfono: <span className="font-medium">[+54 11-5425-8792]</span></span>
+                  <span>WhatsApp / Teléfono: <span className="font-medium">+54 11-5425-8792</span></span>
                 </li>
                 <li className="flex items-start">
                   <span className="mr-2">📧</span>
-                  <span>Email: <span className="font-medium">[info@zhoedent.com]</span></span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">💼</span>
-                  <span>Atención a clínicas y laboratorios: <span className="font-medium">[servicios@zhoedent.com]</span></span>
+                  <span>Email: <span className="font-medium">zhoezhoe40@gmail.com</span></span>
                 </li>
               </ul>
             </div>
@@ -264,8 +245,6 @@ const Contacto = () => {
             {[
               "🔹 Atención inmediata ante reparaciones urgentes de prótesis",
               "🔹 Asesoramiento profesional en placas de descarga",
-              "🔹 Soporte técnico para odontólogos y laboratorios",
-              "🔹 Solicitud de presupuestos y convenios",
               "🔹 Seguimiento personalizado de casos clínicos",
               "🔹 Soluciones a medida para cada necesidad dental"
             ].map((item, index) => (
@@ -284,26 +263,32 @@ const Contacto = () => {
           <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Encuéntranos fácilmente</h2>
           
           <div className="bg-white rounded-lg shadow-md overflow-hidden">
+       
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.016887889527!2d-58.383759!3d-34.603734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDM2JzEzLjQiUyA1OMKwMjMnMDEuNSJX!5e0!3m2!1ses!2sar!4v1620000000000!5m2!1ses!2sar"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3097.465312650228!2d-58.61937711403133!3d-34.64857023140528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc761ac003d3d%3A0x11485a3469d8ab37!2zTW9yw7Nu!5e0!3m2!1sen!2sar!4v1747277048552!5m2!1sen!2sar"
               width="100%"
               height="400"
               style={{border:0}}
               allowFullScreen=""
               loading="lazy"
-              title="Ubicación de Zhoedent en Google Maps"
-              className="w-full"
+              referrerPolicy="Ubicación de Zhoedent en Google Maps"
             ></iframe>
           </div>
-          
+
           <div className="mt-8 text-center">
-            <button className="bg-blue-600 text-white font-semibold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300 inline-flex items-center">
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-              Cómo llegar
-            </button>
+           <a
+              href="https://maps.app.goo.gl/iiZSa3t6xsddK6DL8"
+              target="_blank"
+              rel="noopener noreferrer"
+             >
+              <button className="bg-blue-600 text-white font-semibold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300 inline-flex items-center">
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                Cómo llegar
+              </button>
+            </a>
           </div>
         </div>
       </section>
@@ -316,10 +301,14 @@ const Contacto = () => {
             En Zhoedent, cada sonrisa cuenta. No dudes en contactarnos si necesitás una solución dental confiable, rápida y profesional. Nuestro compromiso es estar cerca de vos y ayudarte en cada paso del tratamiento.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="bg-white text-blue-600 font-semibold py-3 px-8 rounded-full hover:bg-blue-50 transition duration-300 transform hover:scale-105">
+            <a 
+            className="bg-white text-blue-600 font-semibold py-3 px-8 rounded-full hover:bg-blue-50 transition duration-300 transform hover:scale-105"
+            href="tel:+5491154258792">
               Llamar ahora
-            </button>
-            <button className="bg-blue-700 text-white font-semibold py-3 px-8 rounded-full hover:bg-blue-800 transition duration-300">
+            </a>
+            <button className="bg-blue-700 text-white font-semibold py-3 px-8 rounded-full hover:bg-blue-800 transition duration-300"
+            onClick={() => window.open('https://wa.me/541154258792', '_blank')}
+            >
               Enviar WhatsApp
             </button>
           </div>

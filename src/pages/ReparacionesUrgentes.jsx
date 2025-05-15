@@ -1,4 +1,3 @@
-import React from 'react';
 import Seo from '../components/Seo';
 
 const ReparacionesUrgentes = () => {
@@ -12,19 +11,25 @@ const ReparacionesUrgentes = () => {
 
       {/* Hero Section */}
       <section className="py-20 px-4 bg-red-600 text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Reparaciones Urgentes Dentales</h1>
-          <p className="text-xl md:text-2xl mb-8">Atención inmediata y soluciones eficaces ante emergencias odontológicas</p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="bg-white text-red-600 font-semibold py-3 px-8 rounded-full hover:bg-red-50 transition duration-300 transform hover:scale-105">
-              Llama ahora
-            </button>
-            <button className="bg-red-700 text-white font-semibold py-3 px-8 rounded-full hover:bg-red-800 transition duration-300">
-              Ubicación
-            </button>
-          </div>
-        </div>
-      </section>
+  <div className="max-w-4xl mx-auto text-center">
+    <h1 className="text-4xl md:text-5xl font-bold mb-6">Reparaciones Urgentes Dentales</h1>
+    <p className="text-xl md:text-2xl mb-8">
+      Atención inmediata y soluciones eficaces ante emergencias odontológicas
+    </p>
+    <div className="flex flex-col sm:flex-row justify-center gap-4">
+      <a
+        href="tel:+541133081248"
+        className="bg-white text-red-600 font-semibold py-3 px-8 rounded-full hover:bg-red-50 transition duration-300 transform hover:scale-105 text-center"
+      >
+        Llama ahora
+      </a>
+      <button className="bg-red-700 text-white font-semibold py-3 px-8 rounded-full hover:bg-red-800 transition duration-300">
+        Ubicación
+      </button>
+    </div>
+  </div>
+</section>
+
 
       {/* Intro Section */}
       <section className="py-16 px-4 max-w-4xl mx-auto">

@@ -271,6 +271,7 @@ const Contacto = () => {
               style={{border:0}}
               allowFullScreen=""
               loading="lazy"
+              title='Ubicación de Zhoedent en Google Maps'
               referrerPolicy="Ubicación de Zhoedent en Google Maps"
             ></iframe>
           </div>

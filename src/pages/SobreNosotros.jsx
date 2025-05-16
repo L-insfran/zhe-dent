@@ -1,12 +1,26 @@
 import { useEffect } from "react";
 import ReactGA from "react-ga4";
+import { Link } from 'react-router-dom';
 import Seo from "../components/Seo";
+
+const Breadcrumbs = () => (
+  <nav aria-label="Ruta de navegación" className="text-sm py-4 px-4 text-gray-600">
+  <ol className="flex space-x-2">
+    <li>
+      <Link to="/" className="hover:text-red-600  text-white">Inicio</Link>
+    </li>
+    <li>/</li>
+    <li aria-current="page">Sobre Nosotros</li>
+  </ol>
+  </nav>
+);
 
 const SobreNosotros = () => {
   useEffect(() => {
     ReactGA.send({ hitType: "pageview", page: "/sobre-nosotros" });
   }, []);
   return (
+    
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       <Seo
         title="Sobre Nosotros | Zhoedent - Innovación y Calidad Dental"
@@ -15,13 +29,13 @@ const SobreNosotros = () => {
         canonical="https://zhoedent.netlify.app/sobre-nosotros"
         ogImage="https://tudominio.com/zhoedent.netlify.app/images/og-sobre-nosotros.jpg"
       />
-
       {/* Hero Section */}
       <section
         className="py-20 px-4 bg-blue-600 text-white"
         aria-label="Presentación de Zhoedent"
       >
         <div className="max-w-4xl mx-auto text-center">
+      <Breadcrumbs />
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Sobre Nosotros – Zhoedent
           </h1>
@@ -372,6 +386,7 @@ const SobreNosotros = () => {
         </div>
       </section>
     </div>
+  
   );
 };
 

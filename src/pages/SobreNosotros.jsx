@@ -35,7 +35,7 @@ const SobreNosotros = () => {
         aria-label="Presentación de Zhoedent"
       >
         <div className="max-w-4xl mx-auto text-center">
-      <Breadcrumbs />
+        <Breadcrumbs />
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Sobre Nosotros – Zhoedent
           </h1>

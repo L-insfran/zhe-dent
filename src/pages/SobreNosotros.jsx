@@ -10,7 +10,7 @@ const Breadcrumbs = () => (
       <Link to="/" className="hover:text-red-600  text-white">Inicio</Link>
     </li>
     <li>/</li>
-    <li aria-current="page">Sobre Nosotros</li>
+    <li aria-current="page" className="text-black">Sobre Nosotros</li>
   </ol>
   </nav>
 );
@@ -26,7 +26,7 @@ const SobreNosotros = () => {
         title="Sobre Nosotros | Zhoedent - Innovación y Calidad Dental"
         description="Conoce Zhoedent: especialistas en prótesis dentales, placas de descarga y soluciones odontológicas de alta precisión. Tecnología avanzada y atención personalizada."
         keywords="laboratorio dental, prótesis dentales, placas de descarga, reparaciones dentales, sobre zhoedent, quiénes somos"
-        canonical="https://zhoedent.netlify.app/sobre-nosotros"
+        canonical="https://zhoedent.netlify.app/sobrenosotros"
         ogImage="https://tudominio.com/zhoedent.netlify.app/images/og-sobre-nosotros.jpg"
       />
       {/* Hero Section */}
@@ -34,9 +34,9 @@ const SobreNosotros = () => {
         className="py-20 px-4 bg-blue-600 text-white"
         aria-label="Presentación de Zhoedent"
       >
-        <div className="max-w-4xl mx-auto text-center">
         <Breadcrumbs />
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl text font-bold mb-6">
             Sobre Nosotros – Zhoedent
           </h1>
           <p className="text-xl md:text-2xl mb-8">

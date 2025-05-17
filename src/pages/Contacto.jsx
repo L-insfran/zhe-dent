@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import ReactGA from 'react-ga4';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import ContactCTA from '../components/contacto/ContactCTA';
 import ContactForm from '../components/contacto/ContactForm';
 import ContactInfo from '../components/contacto/ContactInfo';
@@ -69,7 +69,7 @@ const Contacto = () => {
         <Link to="/" className="hover:text-red-600  text-white">Inicio</Link>
       </li>
       <li>/</li>
-      <li aria-current="page">Contacto</li>
+      <li aria-current="page" className='text-black'>Contacto</li>
     </ol>
     </nav>
   );
@@ -79,12 +79,13 @@ const Contacto = () => {
       <Seo 
         title="Contacto – Zhoedent"
         description="Formulario de contacto para solicitar información o cotizaciones"
+        canonical="https://zhoedent.netlify.app/contacto"
       />
 
       {/* Hero Section */}
       <section className="py-20 px-4 bg-blue-600 text-white">
-        <div className="max-w-4xl mx-auto text-center">
           <Breadcrumbs />
+        <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">📞 Contacto – Zhoedent</h1>
           <p className="text-xl md:text-2xl mb-8">Estamos aquí para ayudarte con soluciones técnicas de calidad</p>
         </div>

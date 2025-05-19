@@ -4,7 +4,7 @@ const ReparacionesUrgentes = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       <Seo
-        title="Reparaciones Urgentes Dentales | Zhoedent - Emergencias Odontológicas"
+        title="Reparaciones Urgentes Dentales en Morón | Zhoedent - Emergencias Odontológicas"
         description="Atención inmediata para emergencias dentales: dolor agudo, prótesis rotas, fracturas dentales. Soluciones rápidas y profesionales cuando más las necesitas."
         keywords="reparación dental urgente, emergencia odontológica, dolor de muelas, prótesis dental rota, fractura dental, urgencias dentales"
       />
@@ -56,11 +56,11 @@ const ReparacionesUrgentes = () => {
                <strong> Nuestros técnicos dentales estarán atendiendo su EMERGENCIA!!!</strong>
             </p>
           </div>
-          <img
+          {/* <img
             src="/images/reparacion-urgente.jpg"
             alt="Dentista atendiendo emergencia dental"
             className="w-full rounded-lg"
-          />
+          /> */}
         </div>
       </section>
 

@@ -1,4 +1,16 @@
 import Seo from "../components/Seo";
+import { Link } from 'react-router-dom';
+const Breadcrumbs = () => (
+  <nav aria-label="Ruta de navegación" className="text-sm py-4 px-4 text-gray-600">
+  <ol className="flex space-x-2">
+    <li>
+      <Link to="/" className="hover:text-red-600  text-white">servicios</Link>
+    </li>
+    <li>/</li>
+    <li aria-current="page" className='text-black'>reparaciones-urgentes</li>
+  </ol>
+  </nav>
+);
 
 const ReparacionesUrgentes = () => {
   return (
@@ -11,6 +23,7 @@ const ReparacionesUrgentes = () => {
 
       {/* Hero Section */}
       <section className="py-20 px-4 bg-red-600 text-white">
+        <Breadcrumbs />
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Reparaciones Urgentes Dentales

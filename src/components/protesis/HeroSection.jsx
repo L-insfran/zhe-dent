@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
         <Link to="/" className="hover:text-red-600  text-white">servicios</Link>
       </li>
       <li>/</li>
-      <li aria-current="page" className='text-black'>servicios/protesis-acrilicas</li>
+      <li aria-current="page" className='text-black'>protesis-acrilicas</li>
     </ol>
     </nav>
   );

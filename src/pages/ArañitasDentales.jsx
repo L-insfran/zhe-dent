@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import ReactGA from 'react-ga4';
+import { Link } from 'react-router-dom';
 import aranitas from '../assets/aranitas.jpg';
 import Seo from '../components/Seo';
 
@@ -37,6 +38,18 @@ const ArañitasDentales = () => {
     trackEvent('Engagement', 'View Section', `Arañitas - ${sectionName}`);
   };
 
+  const Breadcrumbs = () => (
+    <nav aria-label="Ruta de navegación" className="text-sm py-4 px-4 text-gray-600">
+    <ol className="flex space-x-2">
+      <li>
+        <Link to="/" className="hover:text-red-600  text-white">servicios</Link>
+      </li>
+      <li>/</li>
+      <li aria-current="page" className='text-black'>aranitas-dentales</li>
+    </ol>
+    </nav>
+  );
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       <Seo 
@@ -51,6 +64,7 @@ const ArañitasDentales = () => {
         className="py-20 px-4 bg-blue-600 text-white"
         onMouseEnter={() => trackSectionView('Hero')}
       >
+        <Breadcrumbs />
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Tratamiento de Arañitas Dentales</h1>
           <p className="text-xl md:text-2xl mb-8">Soluciones estéticas y preventivas para microfisuras en los dientes</p>

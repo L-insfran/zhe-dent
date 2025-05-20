@@ -1,6 +1,7 @@
 import React from "react";
 import ReactGA from "react-ga4";
 import { BiLogoFacebookCircle, BiLogoInstagram, BiLogoWhatsapp } from "react-icons/bi";
+import { Link } from 'react-router-dom';
 
 const contactInfo = {
   brand: {
@@ -61,11 +62,11 @@ const Footer = () => {
             {contactInfo.social.map((social) => (
               <a
                 key={social.name}
+                aria-label={`${social.name} (se abre en nueva ventana)`}
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-white transition-colors"
-                aria-label={social.name}
                 onClick={() => trackSocialClick(social.name)}
               >
                 <span className="sr-only">{social.name}</span>
@@ -127,13 +128,17 @@ const Footer = () => {
             <ul className="space-y-2 text-white">
               
               <li>
-                <a href="/servicios" className="text-white hover:text-white focus:text-white transition-colors underline hover:no-underline">Servicios</a>
+                <Link to="/servicios" className="text-white hover:text-white focus:text-white transition-colors underline hover:no-underline">
+                Servicios
+                </Link>
               </li>
               <li>
-                <a href="/sobrenosotros" className="text-white hover:text-white focus:text-white transition-colors underline hover:no-underline">Sobre Nosotros</a>
+                <Link to="/sobrenosotros" className="text-white hover:text-white focus:text-white transition-colors underline hover:no-underline">
+                  Sobre Nosotros
+                </Link>
               </li>
               <li>
-                <a href="/contacto" className="text-white hover:text-white focus:text-white transition-colors underline hover:no-underline">Contacto</a>
+                <Link to="/contacto" className="text-white hover:text-white focus:text-white transition-colors underline hover:no-underline">Contacto</Link>
               </li>
             </ul>
           </nav>
@@ -147,7 +152,7 @@ const Footer = () => {
             &copy; {currentYear} {contactInfo.brand.name}. Todos los derechos reservados.
           </p>
           <p className="text-white text-sm opacity-90">
-            Desarrollado por <a href={`tel:${contactInfo.developer.phone}`} className="hover:text-white transition-colors">{contactInfo.developer.name}</a>
+            Desarrollado por <a href={`tel:${contactInfo.developer.phone}`} className="hover:text-white transition-colors underline ">{contactInfo.developer.name}</a>
           </p>
         </div>
       </div>

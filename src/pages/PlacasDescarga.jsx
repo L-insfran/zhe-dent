@@ -20,6 +20,7 @@ const PlacasDescarga = () => {
         title="Placas de Descarga Dentales | Zhoedent - Tratamiento para Bruxismo"
         description="Protege tus dientes del bruxismo con placas de descarga personalizadas. Alivia dolor mandibular, previene desgaste dental y mejora tu calidad de sueño."
         keywords="placa de descarga, férula dental, bruxismo tratamiento, rechinar dientes, dolor mandíbula, ATM tratamiento"
+         canonical="https://zhoedent.netlify.app/servicios/placas-de-descarga"
       />
 
       {/* Hero Section */}

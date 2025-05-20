@@ -8,6 +8,7 @@ const Home = ({servicesData}) => {
         title="Zhoedent - Mecánica Dental Profesional"
         description="Taller especializado en prótesis dentales, arañitas, placas de descarga y reparaciones urgentes"
         keywords="prótesis dentales, arañitas dentales, placas de descarga"
+        canonical="https://zhoedent.netlify.app/"
       />
       <main className="pt-16 md:pt-24"> {/* Reducir padding-top en móvil */}
         {/* Hero Section */}

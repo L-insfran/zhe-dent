@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import reparaciones from '../assets/reparaciones.png';
 

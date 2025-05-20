@@ -7,7 +7,6 @@ import Seo from '../components/Seo';
 const ArañitasDentales = () => {
   // Inicializar y trackear vista de página
   useEffect(() => {
-    ReactGA.initialize('G-9ZMBJ5WLES'); // Reemplaza con tu ID real
     ReactGA.send({
       hitType: "pageview",
       page: "/aranitas-dentales",

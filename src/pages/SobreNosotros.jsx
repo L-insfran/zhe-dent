@@ -27,7 +27,7 @@ const SobreNosotros = () => {
         description="Conoce Zhoedent: especialistas en prótesis dentales, placas de descarga y soluciones odontológicas de alta precisión. Tecnología avanzada y atención personalizada."
         keywords="laboratorio dental, prótesis dentales, placas de descarga, reparaciones dentales, sobre zhoedent, quiénes somos"
         canonical="https://zhoedent.netlify.app/sobrenosotros"
-        ogImage="https://tudominio.com/zhoedent.netlify.app/images/og-sobre-nosotros.jpg"
+        ogImage="https://zhoedent.netlify.app/images/og-sobre-nosotros.jpg"
       />
       {/* Hero Section */}
       <section
